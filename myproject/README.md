@@ -54,16 +54,16 @@ Go to: http://127.0.0.1:8000
 ## 🖼️ Screenshots
 
 ### Homepage
-![Homepage](myproject/screenshots/screenshot1.png)
+![Homepage](screenshots/screenshot1.png)
 
 ### How to Use
-![How to Use](myproject/screenshots/screenshot2.png)
+![How to Use](screenshots/screenshot2.png)
 
 ### Symptoms Selection
-![Symptoms](myproject/screenshots/screenshot3.png)
+![Symptoms](screenshots/screenshot3.png)
 
 ### Prediction Result
-![Prediction](myproject/screenshots/screenshot4.png)
+![Prediction](screenshots/screenshot4.png)
 
 
 🤖 Machine Learning Model
