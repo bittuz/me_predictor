@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MePredictor Pro</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'disease/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/lumen/bootstrap.min.css">
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home' %}#home">MePredictor Pro</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#how">How to Use</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'predict' %}">Predict</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HOME SECTION -->
+<section id="home" class="home-section position-relative text-light">
+  <div class="video-wrapper">
+    <video autoplay muted loop class="background-video">
+      <source src="{% static 'media/8090411-uhd_4096_2160_25fps.mp4' %}" type="video/mp4">
+    </video>
+  </div>
+  <div class="container content text-center">
+    <h3 class="display-4" style="font-weight: bold;">MePredictor Pro</h3>
+    <p class="lead text-muted">
+      Not feeling well? Select your symptoms and let our intelligent system guide you to a possible diagnosis in seconds.
+    </p>
+    <a href="{% url 'predict' %}" class="btn btn-primary mt-3">Start Predicting</a>
+  </div>
+</section>
+
+<!-- ABOUT Section -->
+<section id="about" class="position-relative min-vh-100 overflow-hidden">
+  <video autoplay muted loop class="w-100 h-100 position-absolute top-0 start-0 object-fit-cover">
+    <source src="{% static 'media/home.mp4' %}" type="video/mp4">
+  </video>
+
+  <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background-color: rgba(0, 0, 0, 0.5); padding: 30px;">
+    <div class="container">
+      <div class="bg-white text-dark p-5 rounded shadow-lg mx-auto" style="max-width: 900px;">
+        <h2 class="display-5 fw-bold mb-4 text-center">About This Project</h2>
+        <p class="fs-5 lh-lg">
+          Many people struggle to understand what illness they might have when symptoms appear. This project is designed to help. It uses a smart system called <strong>Machine Learning</strong> that has been trained to recognize patterns in symptoms. By selecting your symptoms, the system can compare them with thousands of medical cases and suggest the most likely disease.
+        </p>
+        <p class="fs-5 lh-lg">
+          The model behind this tool was trained using a method called <strong>Random Forest</strong>, which means it makes predictions by combining the opinions of many smaller decision-makers — just like asking multiple doctors for advice.
+        </p>
+        <p class="fs-5 lh-lg">
+          You don't need any medical or technical knowledge to use it. Simply choose your symptoms, and it gives you an idea of what illness it might be along with general tips to take care of yourself.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO USE Section -->
+<section id="how" style="background-color: #f8f9fa; padding: 100px 20px;">
+  <div class="container text-center">
+    <h2 class="display-5 fw-bold mb-4">How to Use</h2>
+    <p class="lead" style="font-size: 1.2rem;">
+      Using this intelligent tool is simple and doesn't require any technical knowledge. Just follow the steps below:
+    </p>
+    <ul class="list-unstyled text-start mx-auto" style="max-width: 800px; font-size: 1.15rem; line-height: 1.9;">
+      <li>🩺 <strong>Step 1:</strong> Click the <strong>"Start Predicting"</strong> button above to open the prediction form.</li>
+      <li>✅ <strong>Step 2:</strong> Browse through the list of symptoms provided.</li>
+      <li>📝 <strong>Step 3:</strong> Select the symptoms you are currently experiencing by checking the boxes. You can choose up to <strong>17 symptoms</strong>.</li>
+      <li>🔍 <strong>Step 4:</strong> Click on the <strong>Predict</strong> button below the list of symptoms.</li>
+      <li>📊 <strong>Step 5:</strong> The system will process your input and display the <strong>most likely disease</strong> based on the selected symptoms.</li>
+      <li>💡 <strong>Step 6:</strong> You will also receive a list of <strong>suggested precautions</strong> you can take immediately to manage your symptoms or stay safe.</li>
+      <li>🔁 <strong>Tip:</strong> You can come back and update your symptoms any time and check again.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Smooth Scroll Script -->
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
