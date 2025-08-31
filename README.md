@@ -53,17 +53,6 @@ Go to: http://127.0.0.1:8000
 
 ## 🖼️ Screenshots
 
-### Homepage
-![Homepage](screenshots/screenshot1.png)
-
-### How to Use
-![How to Use](screenshots/screenshot2.png)
-
-### Symptoms Selection
-![Symptoms](screenshots/screenshot3.png)
-
-### Prediction Result
-![Prediction](screenshots/screenshot4.png)
 
 
 🤖 Machine Learning Model
