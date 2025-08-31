@@ -51,9 +51,6 @@ pip install -r requirements.txt
 
 Go to: http://127.0.0.1:8000
 
-## 🖼️ Screenshots
-
-
 
 🤖 Machine Learning Model
 Trained on a dataset with 17 symptoms and 41 diseases.
